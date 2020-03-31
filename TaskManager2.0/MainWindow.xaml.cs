@@ -23,7 +23,7 @@ namespace TaskManager2._0
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ApplicationViewModel();
         }
-        DataContext = new ApplicationViewModel();
     }
 }

@@ -43,15 +43,15 @@
             <Button Command="{Binding AddCommand}" Width="100" Content="Add task" Margin="5,5,5,5.2" Background="#FF9EEBAA"/>
             <Button Command="{Binding RemoveCommand}" CommandParameter="{Binding SelectedTask}" Width="100" Content="Remove task" FontStretch="Condensed" Margin="5,5,5,5.2" Background="#FF9EEBAA"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" DataContext="{Binding SelectedTask}" Margin="5,0,0.4,0.4">
+        <StackPanel Grid.Column="1" DataContext="{Binding SelectedTask}">
             <TextBlock Text="SELECTED TASK"  />
             <TextBlock Text="TASK NAME" />
-            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" Background="#FF9EEBAA" />
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Background="#FF9EEBAA" />
             <TextBlock Text="DESCRIPTION" />
-            <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" TextChanged="TextBox_TextChanged" Background="#FF9EEBAA" />
+            <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Background="#FF9EEBAA" />
             <TextBlock Text="DATE" />
-            <TextBox Text="{Binding Date, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" Background="#FF9EEBAA" />
+            <TextBox Text="{Binding Date, UpdateSourceTrigger=PropertyChanged}" Background="#FF9EEBAA" />
         </StackPanel>
-        <Button Content="Save" Command="{Binding SaveCommand}" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="88,4.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="#FF9EEBAA" BorderBrush="#FFFDECEC" Foreground="Black" Click="Button_Click"/>
+        <Button Content="Save" Command="{Binding SaveCommand}" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="88,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Background="#FF9EEBAA"/>
     </Grid>
 </Window>

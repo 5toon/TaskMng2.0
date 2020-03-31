@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
 
 namespace TaskManager2._0
 {
@@ -12,13 +15,13 @@ namespace TaskManager2._0
 
         public ObservableCollection<Task> Tasks { get; set; }
 
-        private RelayCommand addCommand;
-        public RelayCommand AddCommand
+        private RelayComand addCommand;
+        public RelayComand AddCommand
         {
             get
             {
                 return addCommand ??
-                    (addCommand = new RelayCommand(obj =>
+                    (addCommand = new RelayComand(obj =>
                     {
                         Task task = new Task();
                         Tasks.Insert(0, task);
@@ -28,13 +31,13 @@ namespace TaskManager2._0
             }
         }
 
-        private RelayCommand removeCommand;
-        public RelayCommand RemoveCommand
+        private RelayComand removeCommand;
+        public RelayComand RemoveCommand
         {
             get
             {
                 return removeCommand ??
-                    (removeCommand = new RelayCommand(obj =>
+                    (removeCommand = new RelayComand(obj =>
                     {
                         Task task = obj as Task;
                         if (task != null)
@@ -44,13 +47,13 @@ namespace TaskManager2._0
             }
         }
 
-        private RelayCommand saveCommand;
-        public RelayCommand SaveCommand
+        private RelayComand saveCommand;
+        public RelayComand SaveCommand
         {
             get
             {
                 return saveCommand ??
-                    (saveCommand = new RelayCommand(obj =>
+                    (saveCommand = new RelayComand(obj =>
                     {
                         Task task = obj as Task;
                         if (task == null)
