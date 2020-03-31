@@ -1,0 +1,15 @@
+E:\Crash Course\TaskManager2.0\TaskManager2.0\bin\Debug\TaskManager2.0.exe.config
+E:\Crash Course\TaskManager2.0\TaskManager2.0\bin\Debug\TaskManager2.0.exe
+E:\Crash Course\TaskManager2.0\TaskManager2.0\bin\Debug\TaskManager2.0.pdb
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.csprojAssemblyReference.cache
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\MainWindow.g.cs
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\App.g.cs
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0_MarkupCompile.cache
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0_MarkupCompile.lref
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\MainWindow.baml
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.g.resources
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2._0.Properties.Resources.resources
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.csproj.GenerateResource.cache
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.csproj.CoreCompileInputs.cache
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.exe
+E:\Crash Course\TaskManager2.0\TaskManager2.0\obj\Debug\TaskManager2.0.pdb

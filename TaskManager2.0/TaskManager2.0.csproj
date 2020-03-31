@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="computer-icons-check-mark-others-thumbnail.ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-user-interface-checkbox-computer-icons-clip-art-yes-check-mark-png-5ab1adda493300.9409984815215938182998.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

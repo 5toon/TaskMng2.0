@@ -1,12 +1,57 @@
-﻿<Window x:Class="TaskManager2._0.MainWindow"
+﻿<Window x:Name="Task_Manager_2_0" x:Class="TaskManager2._0.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManager2._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Task Manager 2.0" Height="350" Width="525" Background="#FF06AEBF" BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Icon="kisspng-user-interface-checkbox-computer-icons-clip-art-yes-check-mark-png-5ab1adda493300.9409984815215938182998.png" WindowStartupLocation="CenterScreen" Cursor="Arrow">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="124*" />
+            <ColumnDefinition Width="135*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Tasks}"
+                 SelectedItem="{Binding SelectedTask}" Grid.ColumnSpan="2" Margin="0,0,260.4,0.4" Background="#FF06AEBF">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path = Name}" />
+                        <TextBlock Text="{Binding Path = Description}" />
+                        <TextBlock Text="{Binding Path = Date}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,270,260.4,-0.2" Grid.RowSpan="2">
+            <Button Command="{Binding AddCommand}" Width="100" Content="Add task" Margin="5,5,5,5.2" Background="#FF9EEBAA"/>
+            <Button Command="{Binding RemoveCommand}" CommandParameter="{Binding SelectedTask}" Width="100" Content="Remove task" FontStretch="Condensed" Margin="5,5,5,5.2" Background="#FF9EEBAA"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" DataContext="{Binding SelectedTask}" Margin="5,0,0.4,0.4">
+            <TextBlock Text="SELECTED TASK"  />
+            <TextBlock Text="TASK NAME" />
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" Background="#FF9EEBAA" />
+            <TextBlock Text="DESCRIPTION" />
+            <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" TextChanged="TextBox_TextChanged" Background="#FF9EEBAA" />
+            <TextBlock Text="DATE" />
+            <TextBox Text="{Binding Date, UpdateSourceTrigger=PropertyChanged}" SelectionBrush="#FF9EEBAA" Background="#FF9EEBAA" />
+        </StackPanel>
+        <Button Content="Save" Command="{Binding SaveCommand}" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="88,4.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Background="#FF9EEBAA" BorderBrush="#FFFDECEC" Foreground="Black" Click="Button_Click"/>
     </Grid>
 </Window>
